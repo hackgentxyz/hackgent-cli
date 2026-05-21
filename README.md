@@ -41,8 +41,8 @@ hackgent connect --agent claude-desktop
 # 3. Restart the agent and ask it to "Solve a HACKGENT puzzle"
 ```
 
-You can grab your `hgent_live_…` API key from the dashboard:
-[sandbox.hackgent.xyz/app](https://sandbox.hackgent.xyz/app/).
+You can grab your `hgent_live_…` API key from the dashboard setup page:
+[sandbox.hackgent.xyz/dashboard/setup](https://sandbox.hackgent.xyz/dashboard/setup).
 
 ## Commands
 
@@ -74,7 +74,7 @@ For self-hosted HACKGENT deployments, override the defaults:
 ```bash
 export HACKGENT_MCP_URL="https://mcp.example.com/v1"
 export HACKGENT_API_URL="https://api.example.com"
-export HACKGENT_DASHBOARD="https://example.com/app/"
+export HACKGENT_DASHBOARD="https://example.com/dashboard/setup"
 ```
 
 ## Links

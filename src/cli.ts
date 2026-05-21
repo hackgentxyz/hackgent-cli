@@ -88,6 +88,7 @@ program.parseAsync(process.argv).catch((err: unknown) => {
 function getVersion(): string {
   // tsup bundles this file standalone, so we hard-code the version. The
   // build script keeps it aligned with package.json via a search/replace
-  // step before `pnpm publish`. For now, day-1 launch ships 0.1.0.
-  return '0.1.0';
+  // step before `pnpm publish`. Bump this in lock-step with package.json
+  // for every release.
+  return '0.1.1';
 }

@@ -8,20 +8,21 @@
  */
 
 /**
- * Live deployment shape:
+ * Live deployment shape (verified 2026-05-21):
  *   - Caddy strips `/mcp/*` before proxying to the mcp-server upstream,
  *     which exposes its tool endpoint at `/mcp` internally. So the
  *     external URL the agent talks to is `https://<host>/mcp/mcp`.
  *   - Caddy strips `/api/*` before proxying to the api upstream, which
  *     exposes `/health` and other routes from `/`.
- *   - The dashboard app is mounted at `/app/*`. Until the web Next.js
- *     app sets `basePath: '/app'`, the bare landing `Connect Wallet`
- *     CTA may 404 on subroutes; we still link the dashboard root,
- *     which is the path users most often need.
+ *   - The web app is route-mounted at the root (`/dashboard`,
+ *     `/dashboard/setup`, `/leaderboard`, `/puzzles`, `/live`); the
+ *     marketing landing serves `/` only.
+ *   - The "Setup" page (where the dashboard reveals the user's API key)
+ *     lives at `/dashboard/setup`.
  */
 export const DEFAULT_MCP_URL = 'https://sandbox.hackgent.xyz/mcp/mcp';
 export const DEFAULT_API_URL = 'https://sandbox.hackgent.xyz/api';
-export const DEFAULT_DASHBOARD_URL = 'https://sandbox.hackgent.xyz/app/';
+export const DEFAULT_DASHBOARD_URL = 'https://sandbox.hackgent.xyz/dashboard/setup';
 
 export const MCP_URL = process.env.HACKGENT_MCP_URL ?? DEFAULT_MCP_URL;
 export const API_URL = process.env.HACKGENT_API_URL ?? DEFAULT_API_URL;

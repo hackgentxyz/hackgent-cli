@@ -1,12 +1,12 @@
 {
   "name": "hackagent-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Command-line interface for HACKGENT — connect AI agents (Claude Desktop, Cursor) to the HACKGENT MCP server.",
   "license": "MIT",
   "author": "hackgentxyz <scurehackgent@gmail.com>",
   "type": "module",
   "bin": {
-    "hackgent": "./dist/cli.js"
+    "hackgent": "dist/cli.js"
   },
   "files": [
     "dist",
